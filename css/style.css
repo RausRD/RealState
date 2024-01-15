@@ -131,6 +131,7 @@ body {
 
 /* ========================================================== */
 .main-block {
+	padding-bottom: 110px;
 }
 
 .main-block__container {
@@ -163,6 +164,8 @@ body {
 
 .content-main-block {
 	padding-top: 40px;
+	position: relative;
+	z-index: 2;
 }
 
 .content-main-block__body {
@@ -195,9 +198,8 @@ body {
 	position: relative;
 	z-index: 2;
 	display: flex;
-	height: 86px;
 	margin-right: -188px;
-	background: #fff url('../img/main/home.svg') 33px 50% no-repeat;
+	background: #fff url('../img/main/home.svg') 33px 32px no-repeat;
 	box-shadow: 0px 1.852px 3.148px 0px rgba(0, 0, 0, 0.01),
 		0px 8.148px 6.519px 0px rgba(0, 0, 0, 0.01),
 		0px 20px 13px 0px rgba(0, 0, 0, 0.01),
@@ -206,6 +208,7 @@ body {
 		0px 100px 80px 0px rgba(0, 0, 0, 0.03);
 }
 .form-main-block__input {
+	height: 86px;
 	border: 1px solid #dadada;
 	padding-left: 74px;
 	background-color: transparent;
@@ -213,9 +216,8 @@ body {
 	width: 100%;
 	flex: 1 1 auto;
 }
-.form-main-block__input::placeholder{
+.form-main-block__input::placeholder {
 	color: rgba(49, 53, 59, 0.3);
-
 }
 .form-main-block__button {
 	cursor: pointer;
@@ -257,7 +259,6 @@ body {
 	display: flex;
 	gap: 40px;
 	align-self: center;
-
 }
 .body-main-block__arrow.swiper-button-prev,
 .body-main-block__arrow.swiper-button-next {
@@ -285,9 +286,60 @@ body {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
-	column-gap: 5px;
+	column-gap: 25px;
 }
 
 .partners-main-block__item img {
-	max-width: 100%;  /*щоб зробити їх адаптивними*/
+	max-width: 100%; /*щоб зробити їх адаптивними*/
+}
+
+@media (max-width: 1199.98px) {
+	.body-main-block {
+		display: block;
+	}
+	.form-main-block {
+		margin-right: 0;
+	}
+	.content-main-block__body {
+		padding-right: 0px;
+	}
+	.body-main-block__content {
+		margin-bottom: 40px;
+		padding-bottom: 30px;
+	}
+	.main-block__container {
+		padding-top: 100px;
+	}
+	.main-block__body {
+		margin-bottom: 40px;
+	}
+	.partners-main-block {
+		position: relative;
+		z-index: 2;
+		max-width: none;
+	}
+}
+@media (max-width: 767.98px) {
+	.partners-main-block__items {
+		justify-content: center;
+	}
+	.content-main-block__title {
+		font-size: 30px;
+		line-height: 120%;
+	}
+	.form-main-block {
+		display: block;
+	}
+	.form-main-block__button {
+		width: 100%;
+	}
+}
+
+@media (max-width: 479.98px) {
+	.form-main-block {
+		background: #fff;
+	}
+	.form-main-block__input {
+		padding: 0px 15px;
+	}
 }
